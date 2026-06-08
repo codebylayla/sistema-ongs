@@ -1,3 +1,4 @@
+import flower from './images/flower.png'
 import './App.css'
 
 function App() {
@@ -6,8 +7,18 @@ function App() {
 
       <header className="hero text-white text-center d-flex flex-column justify-content-center align-items-center">
 
-        <h1 className="display-4 fw-bold">
-          Rede Solidária de Alimentos
+          <img
+            src={flower}
+            alt="Flor decorativa"
+            className="flower"
+          />
+
+        <h1 className="logo-title">
+          <span className="logo-r">R</span>
+          <span className="logo-text">ede</span>
+          <br />
+          <span className="logo-s">S</span>
+          <span className="logo-text">olidária</span>
         </h1>
 
         <p className="lead mt-3">
@@ -16,7 +27,7 @@ function App() {
         </p>
 
         <div className="hero-buttons mt-4">
-          <button className="btn btn-light btn-lg me-3">
+          <button className="btn btn-outline-light btn-lg me-3">
             Sou Doador
           </button>
 
