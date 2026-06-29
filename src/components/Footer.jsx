@@ -29,7 +29,7 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-semibold mb-3">Contato</h3>
           <p className="text-sm text-gray-400">
-            Projeto acadêmico / desenvolvimento React + IA
+            Projeto acadêmico
           </p>
           <p className="text-sm text-gray-400 mt-2">
             © {new Date().getFullYear()} Todos os direitos reservados
