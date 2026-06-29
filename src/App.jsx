@@ -1,76 +1,97 @@
-import flower from './images/flower.png'
-import './App.css'
+import { useState } from "react";
+
+import Navbar from "./componentes/Navbar";
+import Hero from "./componentes/Hero";
+import Stats from "./componentes/Stats";
+import ComoFunciona from "./componentes/ComoFunciona";
+import Categorias from "./componentes/Categorias";
+import Footer from "./componentes/Footer";
+
+import "./App.css";
 
 function App() {
+
+  const [pagina, setPagina] = useState("home");
+
   return (
     <div className="app">
 
-      <header className="hero text-white text-center d-flex flex-column justify-content-center align-items-center">
+      <Navbar
+        pagina={pagina}
+        setPagina={setPagina}
+      />
 
-          <img
-            src={flower}
-            alt="Flor decorativa"
-            className="flower"
-          />
+      {pagina === "home" && (
+        <>
+          <Hero setPagina={setPagina} />
 
-        <h1 className="logo-title">
-          <span className="logo-r">R</span>
-          <span className="logo-text">ede</span>
-          <br />
-          <span className="logo-s">S</span>
-          <span className="logo-text">olidária</span>
-        </h1>
+          <Stats />
 
-        <p className="lead mt-3">
-          Conectando estabelecimentos doadores a instituições
-          que precisam de alimentos em Três Corações - MG.
-        </p>
+          <ComoFunciona />
 
-        <div className="hero-buttons mt-4">
-          <button className="btn btn-outline-light btn-lg me-3">
-            Sou Doador
-          </button>
+          <Categorias />
+        </>
+      )}
 
-          <button className="btn btn-outline-light btn-lg">
-            Sou ONG
-          </button>
+      {pagina === "doacoes" && (
+        <div className="container py-5">
+          <h2 className="fw-bold mb-3">
+            Doações
+          </h2>
+
+          <p>
+            Em breve será adicionada a lista de
+            doações.
+          </p>
         </div>
+      )}
 
-      </header>
+      {pagina === "doadores" && (
+        <div className="container py-5">
+          <h2 className="fw-bold">
+            Doadores
+          </h2>
 
-      <section className="sobre container text-center py-5">
+          <p>
+            Lista de estabelecimentos parceiros.
+          </p>
+        </div>
+      )}
 
-        <h2 className="mb-5 fw-bold">Como funciona?</h2>
+      {pagina === "ongs" && (
+        <div className="container py-5">
+          <h2 className="fw-bold">
+            ONGs
+          </h2>
 
-        <div className="row g-4">
+          <p>
+            Lista das instituições cadastradas.
+          </p>
+        </div>
+      )}
 
-          <div className="col-md-4">
-            <div className="card p-3 h-100 shadow-sm">
-              <h3 className="text-success">1. Cadastro</h3>
-              <p>Empresas e ONGs realizam o cadastro na plataforma.</p>
-            </div>
-          </div>
+      {pagina === "sobre" && (
+        <div className="container py-5">
 
-          <div className="col-md-4">
-            <div className="card p-3 h-100 shadow-sm">
-              <h3 className="text-success">2. Doação</h3>
-              <p>O doador registra alimentos disponíveis.</p>
-            </div>
-          </div>
+          <h2 className="fw-bold mb-4">
+            Sobre o Projeto
+          </h2>
 
-          <div className="col-md-4">
-            <div className="card p-3 h-100 shadow-sm">
-              <h3 className="text-success">3. Entrega</h3>
-              <p>A ONG solicita o item e agenda a retirada.</p>
-            </div>
-          </div>
+          <p>
+            A Rede Solidária conecta estabelecimentos
+            que possuem alimentos disponíveis para
+            doação com ONGs da cidade de Três Corações.
+          </p>
 
         </div>
+      )}
 
-      </section>
+      <Footer
+        setPagina={setPagina}
+      />
 
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
