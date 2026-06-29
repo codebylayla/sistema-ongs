@@ -1,14 +1,5 @@
 import { useState } from "react";
-import {
-  Home,
-  Heart,
-  Store,
-  Users,
-  HandHeart,
-  Leaf,
-  Menu,
-  X,
-} from "lucide-react";
+import { Home, Heart, Store, Users, HandHeart, Leaf, Menu, X, } from "lucide-react";
 
 function Navbar({ pagina, setPagina }) {
   const [menuAberto, setMenuAberto] = useState(false);

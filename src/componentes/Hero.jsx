@@ -41,7 +41,11 @@ function Hero({ setPagina }) {
         <div className="d-flex flex-column flex-sm-row justify-content-center gap-3">
 
           <button
-            className="btn btn-warning btn-lg rounded-pill px-5"
+            className="btn px-5 py-3 rounded-pill text-white"
+            style={{
+              background: "linear-gradient(135deg, #759672, #567a52)",
+              border: "none"
+            }}
             onClick={() => setPagina("doadores")}
           >
             <Store size={18} className="me-2" />

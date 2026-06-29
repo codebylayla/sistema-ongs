@@ -7,7 +7,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background: #f5f7f9;
+  background: #3e513c;
 }
 .logo-r,
 .logo-s {
@@ -23,7 +23,6 @@ body {
   color: #f3dbb9;
 }
 
-/* HERO MAIS BONITO */
 .hero {
   background: linear-gradient(135deg, #3e513c);
   min-height: 100vh;
@@ -33,7 +32,6 @@ body {
   overflow: hidden;
 }
 
-/* botões com hover */
 .hero-buttons button {
   transition: 0.5s;
 }
@@ -42,7 +40,6 @@ body {
   transform: scale(1.05);
 }
 
-/* cards mais suaves */
 .card {
   border: none;
   border-radius: 15px;
@@ -61,3 +58,4 @@ body {
   transform: rotate(-125deg);
   width: 350px;
 }
+
