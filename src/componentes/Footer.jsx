@@ -1,78 +1,94 @@
-import React from "react";
+// src/componentes/Footer.jsx
 
-const Footer = () => {
+function Footer({ setPagina }) {
   return (
-    <footer className="relative mt-20 bg-gradient-to-t from-gray-900 via-gray-950 to-black text-gray-300 overflow-hidden">
+    <footer
+      className="mt-5 text-light"
+      style={{
+        background: "linear-gradient(to top, #1b1b1b, #222, #2d2d2d)",
+      }}
+    >
+      <div className="container py-5">
 
-      {/* brilho decorativo */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute -top-20 left-1/2 w-[400px] h-[400px] bg-purple-500 blur-[120px] rounded-full -translate-x-1/2"></div>
-      </div>
+        <div className="row g-5">
 
-      <div className="relative max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Branding */}
+          <div className="col-md-4">
 
-        {/* Branding */}
-        <div>
-          <h2 className="text-white text-2xl font-bold tracking-wide">
-            IA Project
-          </h2>
-          <p className="text-sm mt-3 text-gray-400 leading-relaxed">
-            Um projeto desenvolvido para demonstrar habilidades em desenvolvimento web
-            e criação de interfaces modernas com React.
-          </p>
-        </div>
+            <h3 className="fw-bold">
+              Rede Solidária
+            </h3>
 
-        {/* Links */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Navegação</h3>
+            <p className="text-light opacity-75">
+              Um projeto desenvolvido para conectar estabelecimentos e
+              instituições beneficentes, reduzindo o desperdício de alimentos.
+            </p>
 
-          <ul className="space-y-2 text-sm">
-            {["Início", "Como funciona", "Categorias", "Contato"].map((item) => (
-              <li
-                key={item}
-                className="cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-2"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Social */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Conecte-se</h3>
-
-          <div className="flex gap-4 mt-2">
-            <a
-              href="#"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-white hover:text-black transition"
-            >
-              <span>🐱</span>
-            </a>
-
-            <a
-              href="#"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 hover:text-white transition"
-            >
-              <span>📸</span>
-            </a>
-
-            <a
-              href="#"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-500 hover:text-white transition"
-            >
-              <span>💼</span>
-            </a>
           </div>
-        </div>
-      </div>
 
-      {/* linha inferior */}
-      <div className="border-t border-gray-800 mt-10 py-5 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} IA Project — Todos os direitos reservados
+          {/* Navegação */}
+          <div className="col-md-4">
+
+            <h5 className="fw-bold mb-3">
+              Navegação
+            </h5>
+
+            <div className="d-flex flex-column gap-2">
+
+              <button
+                className="btn btn-link text-start text-decoration-none text-light p-0"
+                onClick={() => setPagina("home")}
+              >
+                Início
+              </button>
+
+              <button
+                className="btn btn-link text-start text-decoration-none text-light p-0"
+                onClick={() => setPagina("doacoes")}
+              >
+                Doações
+              </button>
+
+              <button
+                className="btn btn-link text-start text-decoration-none text-light p-0"
+                onClick={() => setPagina("doadores")}
+              >
+                Doadores
+              </button>
+
+              <button
+                className="btn btn-link text-start text-decoration-none text-light p-0"
+                onClick={() => setPagina("ongs")}
+              >
+                ONGs
+              </button>
+
+              <button
+                className="btn btn-link text-start text-decoration-none text-light p-0"
+                onClick={() => setPagina("sobre")}
+              >
+                Sobre
+              </button>
+
+            </div>
+
+          </div>
+
+          
+
+        </div>
+
+        <hr className="border-secondary my-4" />
+
+        <div className="text-center text-secondary">
+
+          © {new Date().getFullYear()} Rede Solidária — Todos os direitos reservados.
+
+        </div>
+
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

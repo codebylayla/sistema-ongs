@@ -32,7 +32,7 @@ function Hero({ setPagina }) {
           <span className="logo-text">olidária</span>
         </h1>
 
-        <p className="hero-subtitle mx-auto mb-5">
+        <p className="hero-subtitle mx-auto mb-5 text-white">
           Conectando doadores de alimentos a ONGs,
           reduzindo o desperdício e alimentando
           esperanças na nossa comunidade.
